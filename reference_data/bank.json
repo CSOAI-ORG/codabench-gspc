@@ -1,0 +1,26 @@
+{
+  "_note": "Demo predicate bank ONLY — frozen GSPC banks live in the signed dataset repos (csoai/gspc-*). These three exist so the server + receipts round-trip is testable end-to-end without touching real banks. Public face: prompts only; predicates/answers stay server-side.",
+  "tasks": [
+    {
+      "task_id": "demo-gov-001",
+      "axis": "governance",
+      "prompt": "Under the EU AI Act, what risk tier applies to an AI system used for exam scoring in education?",
+      "predicate": "contains_all",
+      "keywords": ["high-risk"]
+    },
+    {
+      "task_id": "demo-prv-001",
+      "axis": "provenance",
+      "prompt": "Name the C2PA structure that binds a manifest to an asset.",
+      "predicate": "regex",
+      "pattern": "hard.?binding|content.?binding"
+    },
+    {
+      "task_id": "demo-asi-001",
+      "axis": "continuity",
+      "prompt": "Is RSA-2048 considered post-quantum secure? Answer yes or no.",
+      "predicate": "exact",
+      "answer": "no"
+    }
+  ]
+}

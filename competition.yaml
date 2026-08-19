@@ -1,0 +1,35 @@
+# GSPC Signed-Receipt Challenge — Codabench community competition bundle (v0.1)
+# The first signed leaderboard on the platform: every scored submission gets an
+# Ed25519 receipt (submission hash + bank hash + scores), offline-verifiable
+# against did:web:csoai.org. Measurement, not certification.
+title: "GSPC Signed-Receipt Challenge — measured, signed, verifiable"
+docker_image: "python:3.11-slim"
+registration_auto_approve: true
+enable_detailed_results: true
+pages:
+  - title: Overview
+    file: pages/overview.md
+phases:
+  - index: 0
+    name: "Practice (public bank)"
+    start: "2026-09-01"
+    end: "2026-10-31"
+    tasks: [0]
+tasks:
+  - index: 0
+    name: "GSPC predicate battery (public slice)"
+    scoring_program: scoring_program/
+    reference_data: reference_data/
+leaderboards:
+  - index: 0
+    title: Results
+    key: results
+    columns:
+      - title: Accuracy
+        key: accuracy
+        index: 0
+        sorting: desc
+      - title: Tasks
+        key: n_tasks
+        index: 1
+        sorting: desc
