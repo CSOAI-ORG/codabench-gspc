@@ -1,0 +1,10 @@
+{
+  "manifest": "gspc-heldout-v1 seal (commit-then-reveal)",
+  "bank_id": "gspc-heldout-v1",
+  "sha256": "7e1be888c5674411f5ddaf54930fd179d95c96629152700c6889f3149485a95e",
+  "n_items": 30,
+  "canonicalization": "JSON, sorted keys, separators (',',':'), UTF-8",
+  "sealed_at": "2026-08-19T10:00:00Z",
+  "reveal_policy": "The full bank file is published (and must hash to sha256 above) when the competition phase closes. Until then only this seal is public. Any revealed bank that does not reproduce this hash is void.",
+  "grading": "deterministic contains_all; unparsed counts incorrect; no model judges another"
+}
